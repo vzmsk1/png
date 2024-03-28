@@ -1,0 +1,127 @@
+.pms-banner {
+  padding: 10rem 0 19rem;
+  @include media-screen {
+    padding: 10rem 0 20rem;
+  }
+  .container {
+    display: grid;
+    justify-content: space-between;
+    @include media-screen {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__subtitle {
+    color: $contrast-color;
+  }
+  &__title {
+    width: 76rem;
+    margin: 1rem 0 8rem;
+    padding-bottom: 8rem;
+    border-bottom: solid 0.2rem transparent;
+    border-image: linear-gradient(145deg, rgb(199, 255, 81) 0%, rgb(186, 119, 253) 100%);
+    border-image-slice: 1;
+    @include media-screen {
+      font-size: 4.8rem;
+      width: 68.5rem;
+      padding-bottom: 3.5rem;
+    }
+  }
+  &__list {
+    width: 77rem;
+    @include media-screen {
+      width: 100%;
+      gap: 5rem;
+    }
+  }
+  &__img-box {
+    position: relative;
+    width: 62.6rem;
+    height: 77.7rem;
+    grid-row: 1 / 12;
+    grid-column: 2;
+    @include media-screen {
+      width: 100%;
+      margin-top: 6.5rem;
+      height: 41.7rem;
+    }
+    &-top {
+      position: absolute;
+      top: 2.5rem;
+      left: 2.5rem;
+      width: 57.6rem;
+      -webkit-mask-image: url(./assets/images/pms__img-top-mask.svg);
+      mask-image: url(./assets/images/pms__img-top-mask.svg);
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      @include media-screen {
+        width: 66rem;
+        height: 51rem;
+        -webkit-mask-image: url(./assets/images/operators-img-mask.svg);
+        mask-image: url(./assets/images/operators-img-mask.svg);
+      }
+    }
+    &-bottom {
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem;
+      width: 59.5rem;
+      @include media-screen {
+        width: 58rem;
+        height: 37rem;
+        bottom: -12rem;
+        right: 2rem;
+        -webkit-mask-image: url(./assets/images/operators-vect-mask.svg);
+        mask-image: url(./assets/images/operators-vect-mask.svg);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-size: contain;
+        mask-size: contain;
+        overflow: hidden;
+        img {
+          height: auto;
+          width: 85rem;
+          position: absolute;
+          top: -4rem;
+          right: 0;
+        }
+      }
+    }
+    &-bottom-bg {
+      position: absolute;
+      bottom: 1rem;
+      right: 2rem;
+      width: 56.5rem;
+      @include media-screen {
+        width: 58rem;
+        height: 24rem;
+      }
+      .desc {
+        @include media-screen {
+          display: none;
+        }
+      }
+      .mob {
+        display: none;
+        @include media-screen {
+          display: block;
+        }
+      }
+    }
+    &-borders {
+      .desc {
+        @include media-screen {
+          display: none;
+        }
+      }
+      .mob {
+        display: none;
+        @include media-screen {
+          display: block;
+        }
+      }
+    }
+  }
+}

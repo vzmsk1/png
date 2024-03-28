@@ -1,0 +1,72 @@
+$octagon-clip-width: 3rem;
+.octagon-card-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.octagon-card {
+  position: absolute;
+  background: $dark-purple-bg-color;
+  @include octagon-bg(1.5rem, 2rem);
+  @include media-screen {
+    @include octagon-bg(2.5rem, 2rem);
+  }
+}
+
+.octagon-card-border {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: rgb(199,255,81);
+  background: $border-gradient;
+  @include octagon-border(2rem);
+  @include media-screen {
+    @include octagon-border(2.5rem);
+  }
+}
+
+.value-card {
+  position: relative;
+  width: 36rem;
+  padding: 5rem 4rem 4rem;
+  display: flex;
+  flex-direction: column;
+  @include media-screen {
+    width: 100%;
+    padding: 5rem 4rem;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: $border-gradient;
+    @include octagon-border(2.5rem);
+    width: 100%;
+    height: 100%;
+  }
+  &__title {
+    height: 9rem;
+    overflow: hidden;
+    @include media-screen {
+      font-size: 2.4rem;
+      line-height: 150%;
+    }
+  }
+  &__img-box {
+    width: 3.2rem;
+    height: 3.2rem;
+    @include media-screen {
+      width: 4.8rem;
+      height: 4.8rem;
+    }
+  }
+  &__text {
+    margin-top: 2.4rem;
+    @include media-screen {
+      margin-top: 1.7rem;
+    }
+  }
+}
